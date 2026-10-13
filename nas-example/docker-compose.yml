@@ -1,0 +1,11 @@
+services:
+  multi-sync:
+    image: ghcr.io/把这里改成你的用户名/webhook-git:latest
+    container_name: multi-sync
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - /volume1/wwwroot:/app
+      - ./hooks.json:/etc/webhook/hooks.json:ro
+      - ./scripts:/scripts:ro

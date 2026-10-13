@@ -1,0 +1,24 @@
+[
+  {
+    "id": "site1",
+    "execute-command": "/scripts/sync-site1.sh",
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "push",
+        "parameter": { "source": "header", "name": "X-Gitea-Event" }
+      }
+    }
+  },
+  {
+    "id": "site2",
+    "execute-command": "/scripts/sync-site2.sh",
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "push",
+        "parameter": { "source": "header", "name": "X-Gitea-Event" }
+      }
+    }
+  }
+]
