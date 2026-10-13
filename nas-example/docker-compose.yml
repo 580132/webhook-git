@@ -1,6 +1,6 @@
 services:
   multi-sync:
-    image: ghcr.io/把这里改成你的用户名/webhook-git:latest
+    image: ghcr.io/580132/webhook-git:latest
     container_name: multi-sync
     restart: always
     ports:
